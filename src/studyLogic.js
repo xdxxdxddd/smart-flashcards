@@ -19,4 +19,4 @@ async function saveCardProgress(cardId, currentLevel, isCorrect, db) {
 }
 
 // Експортуємо функції, щоб їх могли бачити тести
-module.exports = { calculateNextLevel, saveCardProgress };
+export { calculateNextLevel, saveCardProgress };
