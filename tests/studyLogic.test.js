@@ -1,4 +1,5 @@
 // tests/studyLogic.test.js
+import { describe, it, expect, test, vi } from 'vitest'; // Додали vi сюди
 import { calculateNextLevel, saveCardProgress } from '../src/studyLogic';
 
 describe('Бізнес-логіка: Інтервальне повторення карток', () => {
@@ -26,8 +27,9 @@ describe('Бізнес-логіка: Інтервальне повторення
     // Тест 5 (Використання Mock-об'єкта для ізоляції бази даних)
     test('saveCardProgress повинен викликати db.updateLevel з правильними аргументами', async () => {
         // Створюємо Mock-об'єкт замість реальної бази даних MongoDB
+        // Замінили jest.fn() на vi.fn()
         const mockDb = {
-            updateLevel: jest.fn() // Створюємо "шпигуна" (Mock)
+            updateLevel: vi.fn() 
         };
 
         const cardId = "card_123";

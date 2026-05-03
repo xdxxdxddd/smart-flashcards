@@ -1,3 +1,5 @@
+[![CI/CD Pipeline](https://github.com/xdxxdxddd/smart-flashcards/actions/workflows/main.yml/badge.svg)](https://github.com/xdxxdxddd/smart-flashcards/actions/workflows/main.yml)
+
 # Smart Flashcards - v1.0
 
 An interactive web platform designed for creating and studying flashcards to improve learning efficiency and memory retention. 
