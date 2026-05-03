@@ -1,4 +1,4 @@
-# Smart Flashcards
+# Smart Flashcards App
 
 An interactive web platform designed for creating and studying flashcards to improve learning efficiency and memory retention. 
 
