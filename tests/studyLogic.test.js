@@ -1,5 +1,5 @@
 // tests/studyLogic.test.js
-const { calculateNextLevel, saveCardProgress } = require('../src/studyLogic');
+import { calculateNextLevel, saveCardProgress } from '../src/studyLogic';
 
 describe('Бізнес-логіка: Інтервальне повторення карток', () => {
     

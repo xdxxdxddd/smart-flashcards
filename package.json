@@ -1,11 +1,16 @@
 {
   "name": "smart_flashcards",
+  "type": "module",
   "version": "1.0.0",
   "description": "An interactive web platform designed for creating and studying flashcards to improve learning efficiency and memory retention.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "test:coverage": "jest --coverage"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .js --fix",
+    "format": "prettier --write \"src/**/*.{js,json,css}\"",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -14,14 +19,18 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/xdxxdxddd/smart-flashcards/issues"
   },
   "homepage": "https://github.com/xdxxdxddd/smart-flashcards#readme",
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@playwright/test": "^1.59.1",
     "@types/node": "^25.6.0",
-    "jest": "^30.3.0"
+    "eslint": "^10.3.0",
+    "eslint-config-prettier": "^10.1.8",
+    "jest": "^30.3.0",
+    "prettier": "^3.8.3",
+    "vite": "^8.0.10"
   }
 }

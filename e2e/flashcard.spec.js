@@ -1,5 +1,5 @@
 // tests/flashcard.spec.js
-const { test, expect } = require('@playwright/test');
+import { test, expect } from '@playwright/test';
 
 test('E2E: Успішне перевертання флеш-картки в режимі навчання', async ({ page }) => {
     // 1. Заходимо на умовну сторінку нашого застосунку
