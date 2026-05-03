@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "lint": "eslint . --ext .js --fix",
     "format": "prettier --write \"src/**/*.{js,json,css}\"",
-    "test": "jest"
+    "test": "vitest run"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
     "eslint-config-prettier": "^10.1.8",
     "jest": "^30.3.0",
     "prettier": "^3.8.3",
-    "vite": "^8.0.10"
+    "vite": "^8.0.10",
+    "vitest": "^4.1.5"
   }
 }
