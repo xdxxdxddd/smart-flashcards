@@ -1,5 +1,7 @@
 // tests/studyLogic.test.js
+import { describe, it, expect, test } from 'vitest';
 import { calculateNextLevel, saveCardProgress } from '../src/studyLogic';
+
 
 describe('Бізнес-логіка: Інтервальне повторення карток', () => {
     

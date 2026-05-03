@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "lint": "eslint . --ext .js --fix",
     "format": "prettier --write \"src/**/*.{js,json,css}\"",
-    "test": "vitest run"
+    "test": "vitest run tests"
   },
   "repository": {
     "type": "git",
