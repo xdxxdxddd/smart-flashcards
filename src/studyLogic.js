@@ -1,22 +1,30 @@
-// src/studyLogic.js
+import posthog from 'posthog-js';
 
-// Функція для розрахунку наступного рівня картки
+// Розрахунок наступного рівня
 function calculateNextLevel(currentLevel, isCorrect) {
     if (currentLevel < 1 || currentLevel > 5) {
+        posthog.capture('logic_error', { error_type: 'invalid_level', value: currentLevel });
         throw new Error("Рівень має бути від 1 до 5");
     }
 
-    if (!isCorrect) return 1; // Якщо не вгадав - скидаємо на 1 рівень
-    return currentLevel < 5 ? currentLevel + 1 : 5; // Підвищуємо рівень, максимум 5
+    if (!isCorrect) return 1; 
+    return currentLevel < 5 ? currentLevel + 1 : 5; 
 }
 
-// Функція, яка імітує збереження прогресу в Базу Даних
+// Збереження прогресу з відправкою події в PostHog
 async function saveCardProgress(cardId, currentLevel, isCorrect, db) {
     const newLevel = calculateNextLevel(currentLevel, isCorrect);
-    // Викликаємо метод бази даних (яку ми будемо мокати в тестах)
+    
+    // ВІДСТЕЖЕННЯ: Користувач відповів на картку
+    posthog.capture('card_answered', {
+        card_id: cardId,
+        was_correct: isCorrect,
+        old_level: currentLevel,
+        new_level: newLevel
+    });
+
     await db.updateLevel(cardId, newLevel);
     return newLevel;
 }
 
-// Експортуємо функції, щоб їх могли бачити тести
 export { calculateNextLevel, saveCardProgress };

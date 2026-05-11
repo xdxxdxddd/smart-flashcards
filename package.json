@@ -27,11 +27,16 @@
     "@eslint/js": "^10.0.1",
     "@playwright/test": "^1.59.1",
     "@types/node": "^25.6.0",
+    "@vitejs/plugin-vue": "^6.0.6",
     "eslint": "^10.3.0",
     "eslint-config-prettier": "^10.1.8",
     "jest": "^30.3.0",
     "prettier": "^3.8.3",
     "vite": "^8.0.10",
     "vitest": "^4.1.5"
+  },
+  "dependencies": {
+    "@sentry/vue": "^10.52.0",
+    "posthog-js": "^1.372.6"
   }
 }
